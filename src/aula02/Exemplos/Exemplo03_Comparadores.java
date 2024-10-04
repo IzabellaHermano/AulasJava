@@ -7,14 +7,19 @@ public class Exemplo03_Comparadores {
 
         resposta = num1 > num2;
         System.out.println(num1 + ">" + num2 + "=" + resposta);
+
         resposta = num1 < num2;
         System.out.println(num1 + "<" + num2 + "=" + resposta);
+
         resposta = num1 >= num2;
         System.out.println(num1 + ">=" + num2 + "=" + resposta);
+
         resposta = num1 <= num2;
         System.out.println(num1 + "<=" + num2 + "=" + resposta);
+
         resposta = num1 == num2;
         System.out.println(num1 + "==" + num2 + "=" + resposta);
+
         resposta = num1 != num2;
         System.out.println(num1 + "!=" + num2 + "=" + resposta);
 

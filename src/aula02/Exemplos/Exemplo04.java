@@ -10,6 +10,7 @@ public class Exemplo04 {
 
         resposta = num1 < num2 || num3 != num4;
         System.out.println(num1 + " < " + num2 + " || " + num3 + num4 + " = " + resposta);
+
         resposta = !(num1 == num2);
         System.out.println("!(" + num1 + "=="+ num2 + ")=" + resposta);
 
