@@ -8,6 +8,7 @@ public class Exemplo05 {
         long varLong = varInt;
 
 
+
         System.out.println(varByte);
     }
 }
