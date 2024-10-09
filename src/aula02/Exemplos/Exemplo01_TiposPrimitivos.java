@@ -1,6 +1,6 @@
 package aula02.Exemplos;
 
-public class Exemplo01 {
+public class Exemplo01_TiposPrimitivos {
     public static void main(String[] args) {
         int anoNasc;
         double peso;
