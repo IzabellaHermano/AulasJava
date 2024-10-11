@@ -6,7 +6,12 @@ public class Exercicio07 {
         boolean cond1, cond2, cond3;
 
         cond1 = num1 != num2 && num3 <= num4;
-        cond2 = num1 < num2 || num3 == num4;
+        cond2 = num1 > num2 && num3 >= num4;
+        cond3 = num1 < num2 || num3 == num4;
+
+        System.out.println("A primeira condição é: "+ cond1);
+        System.out.println("A segunda condição é: "+ cond2);
+        System.out.println("A terceira condição é: "+ cond3);
 
     }
 }
