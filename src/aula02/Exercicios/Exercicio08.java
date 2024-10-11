@@ -8,7 +8,5 @@ public class Exercicio08 {
 
         System.out.println(" A área é " +total);
 
-
-
     }
 }
