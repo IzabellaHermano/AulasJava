@@ -7,17 +7,17 @@ public class Exemplo02 {
         Scanner scanner = new Scanner(System.in);
         String corSemafaro;
 
-        System.out.println("digite uma cor");
+        System.out.println("Digite a cor do semáfaro");
         corSemafaro = scanner.nextLine();
 
         if (corSemafaro == "verde") {
-            System.out.println("siga");
+            System.out.println("Siga");
         } else if (corSemafaro == "amarelo") {
-            System.out.println("atenção");
+            System.out.println("Atenção");
         } else if (corSemafaro == "vermelho") {
-            System.out.println("pare");
+            System.out.println("Pare");
         } else {
-            System.out.println("cor invalida");
+            System.out.println("Cor Inválida");
 
         }
     }
