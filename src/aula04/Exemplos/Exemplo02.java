@@ -10,11 +10,11 @@ public class Exemplo02 {
         System.out.println("Digite a cor do semáfaro");
         corSemafaro = scanner.nextLine();
 
-        if (corSemafaro == "verde") {
+        if (corSemafaro.equals("verde")) {
             System.out.println("Siga");
-        } else if (corSemafaro == "amarelo") {
+        } else if (corSemafaro.equals("amarelo")) {
             System.out.println("Atenção");
-        } else if (corSemafaro == "vermelho") {
+        } else if (corSemafaro.equals("vermelho")) {
             System.out.println("Pare");
         } else {
             System.out.println("Cor Inválida");
