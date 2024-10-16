@@ -13,5 +13,6 @@ public class Exemplo01 {
          else {
         System.out.println("numero menor que 30");
         }
+         scanner.close();
     }
 }

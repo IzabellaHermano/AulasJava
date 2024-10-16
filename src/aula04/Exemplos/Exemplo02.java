@@ -20,5 +20,6 @@ public class Exemplo02 {
             System.out.println("Cor Inválida");
 
         }
+        scanner.close();
     }
 }
