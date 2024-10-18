@@ -1,6 +1,5 @@
 package aula04.exemplos;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Exemplo04_Switch {
     public static void main(String[] args) {
