@@ -1,8 +1,8 @@
-package aula04.Exemplos;
+package aula04.exemplos;
 
 import java.util.Scanner;
 
-public class Exemplo01 {
+public class Exemplo01_EstruturaDecisao {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x;

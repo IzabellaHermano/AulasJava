@@ -1,6 +1,4 @@
-package aula02.Exemplos;
-
-import java.util.Scanner;
+package aula02.exemplos;
 
 public class Exemplo07_String {
     public static void main(String[] args) {

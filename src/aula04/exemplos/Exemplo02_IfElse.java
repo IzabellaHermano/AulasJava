@@ -1,8 +1,8 @@
-package aula04.Exemplos;
+package aula04.exemplos;
 
 import java.util.Scanner;
 
-public class Exemplo02 {
+public class Exemplo02_IfElse {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String corSemafaro;

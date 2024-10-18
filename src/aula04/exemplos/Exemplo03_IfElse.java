@@ -1,8 +1,8 @@
-package aula04.Exemplos;
+package aula04.exemplos;
 
 import java.util.Scanner;
 
-public class Exemplo03 {
+public class Exemplo03_IfElse {
     public static void main(String[] args) {
         int idade;
         Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package aula02.Exemplos;
+package aula02.exemplos;
 
 public class Exemplo04_OperadoresLogicos {
     public static void main(String[] args) {
