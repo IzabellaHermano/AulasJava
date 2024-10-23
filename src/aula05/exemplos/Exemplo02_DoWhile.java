@@ -1,20 +1,21 @@
-package aula05_EstruturaRepeticao.exemplos;
-
+package aula05.exemplos;
 
 import java.util.Scanner;
 
-public class Exemplo01_While {
+public class Exemplo02_DoWhile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int idade =  20;
+        int idade;
 
-        while (idade < 18){
-            System.out.println(idade);
+        do{
             System.out.print("Digite sua idade: ");
             idade = scanner.nextInt();
-        }
+            System.out.println(idade);
+
+        }while (idade < 18);
         System.out.println("Você é maior de idade!");
+
         scanner.close();
     }
 }

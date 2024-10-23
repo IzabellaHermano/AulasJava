@@ -1,4 +1,4 @@
-package aula05_EstruturaRepeticao.exemplos;
+package aula05.exemplos;
 
 import java.util.Scanner;
 
