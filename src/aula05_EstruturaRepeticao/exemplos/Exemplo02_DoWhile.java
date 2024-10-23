@@ -15,5 +15,7 @@ public class Exemplo02_DoWhile {
 
         }while (idade < 18);
         System.out.println("Você é maior de idade!");
+
+        scanner.close();
     }
 }

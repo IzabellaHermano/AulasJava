@@ -13,6 +13,6 @@ public class Exemplo03_For {
         for(int multiplicador = 0; multiplicador <= 10 ; multiplicador++) {
             System.out.println(x + "x" + multiplicador + "=" + x * multiplicador);
         }
-
+    scanner.close();
     }
 }
