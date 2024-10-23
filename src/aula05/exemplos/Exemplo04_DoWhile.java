@@ -35,7 +35,6 @@ public class Exemplo04_DoWhile {
             }
 
         }while (opicao != 4) ;
-
     scanner.close();
     }
 }
