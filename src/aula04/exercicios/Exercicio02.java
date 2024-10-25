@@ -14,7 +14,7 @@ public class Exercicio02 {
 
         System.out.println("O valor total da compra é " + valorFinal);
 
-
+    scanner.close();
 
     }
 }
