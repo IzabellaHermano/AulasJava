@@ -12,6 +12,6 @@ public class Exemplo04_MatrizAtribuicao {
 
         String [][] matrizNomes = {{"Rafael","Gisele"}, {"Lara","Luana"}};
 
-        System.out.println("Valor da posição [1] [1] = "+ matrizNomes[1][1]);
+        System.out.println("Valor da posição [1][1] = "+ matrizNomes[1][1]);
     }
 }
