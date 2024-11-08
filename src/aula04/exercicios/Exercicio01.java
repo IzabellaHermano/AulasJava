@@ -14,7 +14,6 @@ public class Exercicio01 {
         }else{
             System.out.println("Acesso negado");
         }
-
     scanner.close();
     }
 }
