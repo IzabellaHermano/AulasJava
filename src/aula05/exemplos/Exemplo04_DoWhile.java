@@ -31,7 +31,6 @@ public class Exemplo04_DoWhile {
                     break;
                 default:
                     System.out.println("Opição inválida");
-
             }
 
         }while (opicao != 4) ;
