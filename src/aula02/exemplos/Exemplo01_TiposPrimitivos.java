@@ -15,8 +15,6 @@ public class Exemplo01_TiposPrimitivos {
 
         System.out.println(altura);
 
-
-
         anoNasc ++;
 
                 System.out.println(sexo);
