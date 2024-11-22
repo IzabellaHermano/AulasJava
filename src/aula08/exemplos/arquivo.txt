@@ -1,1 +1,2 @@
-Texto gravado no arquivo
+Novo Texto gravado no arquivo
+Olá

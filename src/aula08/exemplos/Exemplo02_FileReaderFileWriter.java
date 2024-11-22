@@ -12,7 +12,7 @@ public class Exemplo02_FileReaderFileWriter {
         try {
 
             FileWriter fileWriter = new FileWriter(arquivo);
-            fileWriter.write("Texto gravado no arquivo");
+            fileWriter.write(" Texto gravado no arquivo");
             fileWriter.close();
 
             FileReader fileReader = new FileReader(arquivo);
