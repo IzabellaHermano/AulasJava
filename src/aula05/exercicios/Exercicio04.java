@@ -1,6 +1,5 @@
 package aula05.exercicios;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Exercicio04 {
@@ -10,19 +9,22 @@ public class Exercicio04 {
         System.out.print("Digite um numero positivo inteiro:");
         int numero = scanner.nextInt();
 
-        if (numero < 2){
-            System.out.print("O número" + numero+ "não é primo");
-        }else {
-            int divisao = 0;
+        int divisao = 0;
+
+        if (numero < 2) {
+            System.out.print("O número" + numero + "não é primo");
+        } else {
 
             for (int i = 1; i <= numero; i++)
-            if (numero % i == 0){
-                divisao++;
+                if (numero % i == 0) {
+                    divisao++;
+                }
+        } if (divisao == 2){
+            System.out.println(" O número "+ numero+ " é primo");
 
-
-            }
-
+        }else{
+            System.out.println(" O número "+numero+" não é primo");
         }
-
+        scanner.close();
     }
 }
