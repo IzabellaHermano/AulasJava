@@ -1,6 +1,6 @@
-package aula07.exemplos;
+package aula05.exercicios;
 
-public class Exemplo01 {
+public class Exercicio05 {
     public static void main(String[] args) {
 
     }
