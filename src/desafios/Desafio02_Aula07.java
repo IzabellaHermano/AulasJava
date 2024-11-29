@@ -15,32 +15,45 @@ public class Desafio02_Aula07 {
                 |       5- Sair                                                 |
                 |_______________________________________________________________|
                 """;
-        System.out.println(menu);
-        int opcao = scanner.nextInt();;
-        scanner.nextLine();
+        int opcao;
 
-        switch (opcao){
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            default:
-                System.out.println("Opção inválida.");
-        }
+        do {
+            System.out.println(menu);
+            opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcao) {
+                case 1:
+                    exibirUsuarios();
+                    break;
+                case 2:
+                    cadastrarUsuarios();
+                    break;
+                case 3:
+                    atualizarUsuarios();
+                    break;
+                case 4:
+                    deletarUsuarios();
+                    break;
+                case 5:
+                    System.out.println("Fim de Programa");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+        }while (opcao != 5);
 
     }
     public static void exibirUsuarios(){
+        System.out.println("exibirUsuarios");
     }
     public static void cadastrarUsuarios(){
+        System.out.println("cadastrarUsuarios");
     }
     public static void atualizarUsuarios(){
+        System.out.println("atualizarUsuarios");
     }
     public static void deletarUsuarios(){
+        System.out.println("deletarUsuarios");
     }
 }
