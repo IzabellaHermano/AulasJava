@@ -8,10 +8,11 @@ public class Exercicio01 {
         int [] numeros = new int[5];
         int soma = 0;
 
-        System.out.print("Digite 5 números inteiros:");
+        System.out.println("Digite 5 números inteiros:");
+
         
         for(int i=0; i < numeros.length; i++){
-            System.out.println("Numero " + (i +1)+ ":");
+            System.out.print("Numero " + (i +1)+ ":");
             numeros[i]= scanner.nextInt();
             soma += numeros[i];
         }
