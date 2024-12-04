@@ -44,6 +44,7 @@ public class Desafio02_Aula07 {
                     break;
                 case 5:
                     System.out.println("Fim de Programa");
+                    scanner.close();
                     break;
                 default:
                     System.out.println("Opção inválida.");
@@ -52,6 +53,15 @@ public class Desafio02_Aula07 {
 
     }
     public static void exibirUsuarios(){
+
+        String tabela="";
+        for(String[]linha :matrizCadastro){
+            for (int coluna = 0; coluna < linha.length ; coluna++) {
+                tabela += linha[coluna] + "\t\t";
+            }
+            tabela += "\n";
+        }
+        System.out.println(tabela);
 
     }
     public static void cadastrarUsuarios(){
@@ -70,7 +80,7 @@ public class Desafio02_Aula07 {
 
         for (int linha = matrizCadastro.length; linha <= novaMatriz.length ;linha++){
 
-            System.out.print("ID:"+linha);
+            System.out.print(cabecalho[0]+linha);
             novaMatriz[linha][0] =String.valueOf(linha);
 
             for (int coluna  = 1; coluna  < cabecalho.length; coluna ++) {
@@ -79,6 +89,7 @@ public class Desafio02_Aula07 {
 
             }
         }
+        matrizCadastro = novaMatriz;
     }
     public static void atualizarUsuarios(){
         System.out.println("atualizarUsuarios");
