@@ -7,7 +7,7 @@ public class Desafio02_Aula07 {
 
     //Variável global
     static String [] cabecalho = {"ID","NOME","TELEFONE","EMAIL"};
-    static String [][] matrizCadastro;
+    static String [][] matrizCadastro = {{"",""}};
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
