@@ -6,7 +6,7 @@ public class Desafio02_Aula07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String menu= """
-                ________________________________________________________________
+                _________________________________________________________________
                 |   Escolha uma Opição:                                         |
                 |       1- Exibir Cadastro Completo                             |
                 |       2- Cadastrar Usuário                                    |
