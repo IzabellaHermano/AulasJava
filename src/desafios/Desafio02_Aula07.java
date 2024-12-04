@@ -1,11 +1,11 @@
 package desafios;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Desafio02_Aula07 {
 
-//Variável global
-
+    //Variável global
     static String [] cabecalho = {"ID","NOME","TELEFONE","EMAIL"};
     static String [][] matrizCadastro;
     static Scanner scanner = new Scanner(System.in);
@@ -60,8 +60,10 @@ public class Desafio02_Aula07 {
         int qntUsuario = scanner.nextInt();
         scanner.nextLine();
 
-        matrizCadastro = new String[qntUsuario+1][cabecalho.length];
-        matrizCadastro [0] = cabecalho;
+        String[][] novaMatriz= new String[matrizCadastro.length + qntUsuario][cabecalho.length];
+        for ( int linha = 0; linha < matrizCadastro.length ;linha++){
+            novaMatriz [linha] = Arrays.copyOf(matrizCadastro[linha],matrizCadastro[linha].length);
+        }
 
         for (int linha = 1; linha <=qntUsuario ;linha++){
             System.out.println("-----------------------------------------------------");
@@ -71,6 +73,7 @@ public class Desafio02_Aula07 {
             System.out.print("ID:"+linha);
             matrizCadastro[linha][0] =String.valueOf(linha);
             scanner.nextLine();
+
 
             System.out.print("NOME:");
             matrizCadastro [linha][1] = scanner.nextLine();
