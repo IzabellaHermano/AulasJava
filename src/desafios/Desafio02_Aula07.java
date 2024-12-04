@@ -61,31 +61,23 @@ public class Desafio02_Aula07 {
         scanner.nextLine();
 
         String[][] novaMatriz= new String[matrizCadastro.length + qntUsuario][cabecalho.length];
+
         for ( int linha = 0; linha < matrizCadastro.length ;linha++){
             novaMatriz [linha] = Arrays.copyOf(matrizCadastro[linha],matrizCadastro[linha].length);
         }
 
-        for (int linha = 1; linha <=qntUsuario ;linha++){
-            System.out.println("-----------------------------------------------------");
-            System.out.println("Preencha os dados a seguir:");
-            System.out.println("Cadastro do usuário "+linha);
+        System.out.println("Preencha os dados a seguir:");
+
+        for (int linha = matrizCadastro.length; linha <= novaMatriz.length ;linha++){
 
             System.out.print("ID:"+linha);
-            matrizCadastro[linha][0] =String.valueOf(linha);
-            scanner.nextLine();
+            novaMatriz[linha][0] =String.valueOf(linha);
 
+            for (int coluna  = 1; coluna  < cabecalho.length; coluna ++) {
+                System.out.print(cabecalho[coluna] +": ");
+                novaMatriz [linha][coluna] = scanner.nextLine();
 
-            System.out.print("NOME:");
-            matrizCadastro [linha][1] = scanner.nextLine();
-
-
-            System.out.print("TELEFONE:");
-            matrizCadastro [linha][2]= scanner.nextLine();
-
-
-            System.out.print("EMAIL:");
-            matrizCadastro [linha][3]= scanner.nextLine();
-
+            }
         }
     }
     public static void atualizarUsuarios(){
