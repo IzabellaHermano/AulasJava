@@ -12,6 +12,8 @@ public class Desafio02_Aula07 {
 
     public static void main(String[] args) {
 
+        matrizCadastro[0]= cabecalho;
+
         String menu= """
                 _________________________________________________________________
                 |   Escolha uma Opição:                                         |
