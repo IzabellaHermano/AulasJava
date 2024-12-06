@@ -55,14 +55,19 @@ public class Desafio02_Aula07 {
 
     }
     public static void exibirUsuarios(){
+        StringBuilder tabela = new StringBuilder();
 
-        String tabela="";
-        for(String[]linha :matrizCadastro){
-            for (int coluna = 0; coluna < linha.length ; coluna++) {
-                tabela += linha[coluna] + "\t\t";
+        for (String[] linha : matrizCadastro) {
+            for (int coluna = 0; coluna < linha.length; coluna++) {
+                int tamanhoColuna = coluna == 0? 5 : (coluna == 2? 10 :25);
+                tabela.append(String.format("%-"+tamanhoColuna+"s | ",linha[coluna]));
+
             }
-            tabela += "\n";
+
+            tabela.append("\n");
+
         }
+
         System.out.println(tabela);
 
     }
@@ -80,7 +85,7 @@ public class Desafio02_Aula07 {
 
         System.out.println("Preencha os dados a seguir:");
 
-        for (int linha = matrizCadastro.length; linha <= novaMatriz.length ;linha++){
+        for (int linha = matrizCadastro.length; linha < novaMatriz.length ;linha++){
 
             System.out.print(cabecalho[0]+linha);
             novaMatriz[linha][0] =String.valueOf(linha);
@@ -91,10 +96,27 @@ public class Desafio02_Aula07 {
 
             }
         }
+
         matrizCadastro = novaMatriz;
+
     }
     public static void atualizarUsuarios(){
-        System.out.println("atualizarUsuarios");
+
+       exibirUsuarios();
+
+        System.out.println("\nDigite o ID do Usuário que Deseja Atualizar");
+        int idEscolhido = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Atualize as Informações a Seguir");
+
+        System.out.println(cabecalho[0]+ " - "+ idEscolhido);
+        for (int coluna = 1; coluna < cabecalho.length; coluna++) {
+            System.out.println(cabecalho[coluna]+": ");
+            matrizCadastro [idEscolhido][coluna]= scanner.nextLine();
+        }
+
+        exibirUsuarios();
+
     }
     public static void deletarUsuarios(){
         System.out.println("deletarUsuarios");
