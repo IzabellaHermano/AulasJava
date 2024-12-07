@@ -20,5 +20,6 @@ public class Exercicio04 {
 
         System.out.println(" A média das notas são: "+media);
 
+        scanner.close();
     }
 }
