@@ -1,8 +1,9 @@
 package desafios;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -101,6 +102,7 @@ public class Desafio03_Aula08 {
 
         matrizCadastro = novaMatriz;
         System.out.println("Usuário Cadastrado com Sucesso.");
+        salvarDadosNoArquivo();
 
     }
     public static void atualizarUsuarios(){
@@ -121,6 +123,7 @@ public class Desafio03_Aula08 {
 
         exibirUsuarios();
         System.out.println("Usuário Atualizado com Sucesso.");
+        salvarDadosNoArquivo();
 
     }
 
@@ -142,17 +145,29 @@ public class Desafio03_Aula08 {
         }
         matrizCadastro= novaMatriz;
         exibirUsuarios();
-
         System.out.println("Usuário Deletado com Sucesso.");
+        salvarDadosNoArquivo();
 
     }
-    public static void salvarArquivo(){
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""));
+    public static void salvarDadosNoArquivo(){
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""))){
+            for (String[]linha: matrizCadastro){
+               bufferedWriter.write( String.join(",",linha)+"\n");
+            }
         } catch (Exception e){
             throw new RuntimeException();
 
         }
+
+    }
+    public static void carregarDadosDoArquivo(){
+       try (BufferedReader bufferedReader = new BufferedReader(new FileReader(""))){
+
+
+       }catch (Exception e){
+           throw new RuntimeException();
+
+       }
 
     }
 }
