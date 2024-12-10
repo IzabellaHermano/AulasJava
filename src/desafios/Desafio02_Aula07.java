@@ -78,7 +78,6 @@ public class Desafio02_Aula07 {
         scanner.nextLine();
 
         String[][] novaMatriz= new String[matrizCadastro.length + qntUsuario][cabecalho.length];
-
         for ( int linha = 0; linha < matrizCadastro.length ;linha++){
             novaMatriz [linha] = Arrays.copyOf(matrizCadastro[linha],matrizCadastro[linha].length);
         }
@@ -86,7 +85,6 @@ public class Desafio02_Aula07 {
         System.out.println("Preencha os dados a seguir:");
 
         for (int linha = matrizCadastro.length; linha < novaMatriz.length ;linha++){
-
             System.out.print(cabecalho[0]+linha);
             novaMatriz[linha][0] =String.valueOf(linha);
 
@@ -98,27 +96,50 @@ public class Desafio02_Aula07 {
         }
 
         matrizCadastro = novaMatriz;
+        System.out.println("Usuário Cadastrado com Sucesso.");
 
     }
     public static void atualizarUsuarios(){
 
        exibirUsuarios();
 
-        System.out.println("\nDigite o ID do Usuário que Deseja Atualizar");
+        System.out.print("\nDigite o ID do Usuário que Deseja Atualizar:");
         int idEscolhido = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Atualize as Informações a Seguir");
 
+        System.out.println("Atualize as Informações a Seguir");
         System.out.println(cabecalho[0]+ " - "+ idEscolhido);
+
         for (int coluna = 1; coluna < cabecalho.length; coluna++) {
             System.out.println(cabecalho[coluna]+": ");
             matrizCadastro [idEscolhido][coluna]= scanner.nextLine();
         }
 
         exibirUsuarios();
+        System.out.println("Usuário Atualizado com Sucesso.");
 
     }
+
     public static void deletarUsuarios(){
-        System.out.println("deletarUsuarios");
+     exibirUsuarios();
+
+        System.out.print("\nDigite o ID do Usuário que Deseja Deletar o Registro:");
+        int idEscolhido = scanner.nextInt();
+        scanner.nextLine();
+
+        String[][] novaMatriz= new String[matrizCadastro.length - 1 ][cabecalho.length];
+        for ( int linha = 0, idNovaMatriz = 0; linha < matrizCadastro.length ;linha++){
+            if (linha == idEscolhido){
+                continue;
+            }
+            novaMatriz [idNovaMatriz] = Arrays.copyOf(matrizCadastro[linha],matrizCadastro[linha].length);
+            novaMatriz[idNovaMatriz][0]= String.valueOf(idNovaMatriz);
+            idNovaMatriz++;
+        }
+        matrizCadastro= novaMatriz;
+        exibirUsuarios();
+
+        System.out.println("Usuário Deletado com Sucesso.");
+
     }
 }
