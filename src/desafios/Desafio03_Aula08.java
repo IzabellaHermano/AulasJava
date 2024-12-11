@@ -13,7 +13,7 @@ public class Desafio03_Aula08 {
     static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"Desafio03"+File.separator+"bancoDeDados.txt");
 
     public static void main(String[] args) {
-
+        carregarDadosDoArquivo();
         matrizCadastro[0]= cabecalho;
 
         String menu= """
@@ -139,7 +139,7 @@ public class Desafio03_Aula08 {
         salvarDadosNoArquivo();
     }
     public static void salvarDadosNoArquivo(){
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""))){
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(arquivoBancoDeDados))){
             for (String[]linha: matrizCadastro){
                bufferedWriter.write( String.join(",",linha)+"\n");
             }
@@ -149,7 +149,14 @@ public class Desafio03_Aula08 {
         }
     }
     public static void carregarDadosDoArquivo(){
-       try (BufferedReader bufferedReader = new BufferedReader(new FileReader(""))){
+
+
+       try (BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoBancoDeDados))){
+           if(!arquivoBancoDeDados.exists()){
+               if (arquivoBancoDeDados.createNewFile()){
+                   System.out.println("Arquivo "+arquivoBancoDeDados.getName()+"Criado com Sucesso");
+               }
+           }
         String linha;
         StringBuilder conteudoArquivo = new StringBuilder();
 
