@@ -53,7 +53,7 @@ public class Desafio03_Aula08 {
                     scanner.close();
                     break;
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("Opção Inválida.");
             }
         }while (opcao != 5);
 
@@ -77,7 +77,7 @@ public class Desafio03_Aula08 {
     }
     public static void cadastrarUsuarios(){
 
-        System.out.print("Informe a quantidade de usuários a serem cadastrados:");
+        System.out.print("Informe a Quantidade de Usuários a Serem Cadastrados:");
         int qntUsuario = scanner.nextInt();
         scanner.nextLine();
 
@@ -86,7 +86,7 @@ public class Desafio03_Aula08 {
             novaMatriz [linha] = Arrays.copyOf(matrizCadastro[linha],matrizCadastro[linha].length);
         }
 
-        System.out.println("Preencha os dados a seguir:");
+        System.out.println("Preencha os Dados a Seguir:");
 
         for (int linha = matrizCadastro.length; linha < novaMatriz.length ;linha++){
             System.out.print(cabecalho[0]+linha);
@@ -162,7 +162,15 @@ public class Desafio03_Aula08 {
     }
     public static void carregarDadosDoArquivo(){
        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(""))){
+        String linha;
+        StringBuilder conteudoArquivo = new StringBuilder();
 
+        while ((linha = bufferedReader.readLine())!=null){
+            if (!linha.trim().isEmpty()){
+                conteudoArquivo.append(linha).append("\n");
+            }
+        }
+        String[] linhaDadosUsuario= conteudoArquivo.toString().split("\n");
 
        }catch (Exception e){
            throw new RuntimeException();
