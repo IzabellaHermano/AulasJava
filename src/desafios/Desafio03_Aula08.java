@@ -10,7 +10,7 @@ public class Desafio03_Aula08 {
     static String [] cabecalho = {"ID","NOME","TELEFONE","EMAIL"};
     static String [][] matrizCadastro = {{"",""}};
     static Scanner scanner = new Scanner(System.in);
-    static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"Desafio03"+File.separator+"bancoDeDados.txt");
+    static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"bancoDeDados.txt");
 
     public static void main(String[] args) {
         carregarDadosDoArquivo();
@@ -143,20 +143,24 @@ public class Desafio03_Aula08 {
             for (String[]linha: matrizCadastro){
                bufferedWriter.write( String.join(",",linha)+"\n");
             }
-        } catch (Exception e){
-            throw new RuntimeException();
+        } catch (IOException e){
+            throw new RuntimeException(e);
 
         }
     }
     public static void carregarDadosDoArquivo(){
-
+        if(!arquivoBancoDeDados.exists()){
+            try {
+                if (arquivoBancoDeDados.createNewFile()) {
+                    System.out.println("Arquivo " + arquivoBancoDeDados.getName() + "Criado com Sucesso");
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoBancoDeDados))){
-           if(!arquivoBancoDeDados.exists()){
-               if (arquivoBancoDeDados.createNewFile()){
-                   System.out.println("Arquivo "+arquivoBancoDeDados.getName()+"Criado com Sucesso");
-               }
-           }
+          
         String linha;
         StringBuilder conteudoArquivo = new StringBuilder();
 
@@ -172,8 +176,8 @@ public class Desafio03_Aula08 {
             matrizCadastro[i] = linhaDadosUsuario[i].split(",");
 
         }
-       }catch (Exception e){
-           throw new RuntimeException();
+       }catch (IOException e){
+           throw new RuntimeException(e);
 
        }
     }
