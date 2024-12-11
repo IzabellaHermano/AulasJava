@@ -1,9 +1,6 @@
 package desafios;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,6 +10,7 @@ public class Desafio03_Aula08 {
     static String [] cabecalho = {"ID","NOME","TELEFONE","EMAIL"};
     static String [][] matrizCadastro = {{"",""}};
     static Scanner scanner = new Scanner(System.in);
+    static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"Desafio03"+File.separator+"bancoDeDados");
 
     public static void main(String[] args) {
 
@@ -56,7 +54,6 @@ public class Desafio03_Aula08 {
                     System.out.println("Opção Inválida.");
             }
         }while (opcao != 5);
-
     }
     public static void exibirUsuarios(){
         StringBuilder tabela = new StringBuilder();
@@ -67,13 +64,9 @@ public class Desafio03_Aula08 {
                 tabela.append(String.format("%-"+tamanhoColuna+"s | ",linha[coluna]));
 
             }
-
             tabela.append("\n");
-
         }
-
         System.out.println(tabela);
-
     }
     public static void cadastrarUsuarios(){
 
@@ -103,7 +96,6 @@ public class Desafio03_Aula08 {
         matrizCadastro = novaMatriz;
         System.out.println("Usuário Cadastrado com Sucesso.");
         salvarDadosNoArquivo();
-
     }
     public static void atualizarUsuarios(){
 
@@ -122,11 +114,9 @@ public class Desafio03_Aula08 {
         }
 
         exibirUsuarios();
-        System.out.println("Usuário Atualizado com Sucesso.");
-        salvarDadosNoArquivo();
+        System.out.println("Usuário Atualizado com Sucesso.");salvarDadosNoArquivo();
 
     }
-
     public static void deletarUsuarios(){
      exibirUsuarios();
 
@@ -147,7 +137,6 @@ public class Desafio03_Aula08 {
         exibirUsuarios();
         System.out.println("Usuário Deletado com Sucesso.");
         salvarDadosNoArquivo();
-
     }
     public static void salvarDadosNoArquivo(){
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""))){
@@ -158,7 +147,6 @@ public class Desafio03_Aula08 {
             throw new RuntimeException();
 
         }
-
     }
     public static void carregarDadosDoArquivo(){
        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(""))){
@@ -172,10 +160,14 @@ public class Desafio03_Aula08 {
         }
         String[] linhaDadosUsuario= conteudoArquivo.toString().split("\n");
 
+        matrizCadastro = new String[linhaDadosUsuario.length][cabecalho.length];
+        for (int i =0 ; i< linhaDadosUsuario.length;i++){
+            matrizCadastro[i] = linhaDadosUsuario[i].split(",");
+
+        }
        }catch (Exception e){
            throw new RuntimeException();
 
        }
-
     }
 }
