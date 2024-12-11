@@ -10,7 +10,7 @@ public class Desafio03_Aula08 {
     static String [] cabecalho = {"ID","NOME","TELEFONE","EMAIL"};
     static String [][] matrizCadastro = {{"",""}};
     static Scanner scanner = new Scanner(System.in);
-    static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"Desafio03"+File.separator+"bancoDeDados");
+    static File arquivoBancoDeDados = new File(System.getProperty("user.home"),"Desafio03"+File.separator+"bancoDeDados.txt");
 
     public static void main(String[] args) {
 
